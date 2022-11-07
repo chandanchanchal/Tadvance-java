@@ -1,3 +1,11 @@
+################################ DB info  #####################
+
+HOST:test.crcx7l1vb9mu.us-east-1.rds.amazonaws.com
+UID:test
+PWD:testtest
+
+
+
 create table designation
 (
     code int primary key auto_increment,
