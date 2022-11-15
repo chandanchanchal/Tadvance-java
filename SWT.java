@@ -166,7 +166,7 @@ public class MainComposite extends Composite {
   
   ######################################################################################################################
   
-  public class EvenTestButton {
+  public class EventTestButton {
 
   protected Shell shlButtonEventDemo;
 
