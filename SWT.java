@@ -161,6 +161,55 @@ public class MainComposite extends Composite {
   @Override
   protected void checkSubclass() {
   }
+  
+  
+  
+  ######################################################################################################################
+  
+  public class EvenTestButton {
+
+  protected Shell shlButtonEventDemo;
+
+  public static void main(String[] args) {
+      try {
+          EvenTestButton window = new EvenTestButton();
+          window.open();
+      } catch (Exception e) {
+          e.printStackTrace();
+      }
+  }
+
+  public void open() {
+      Display display = Display.getDefault();
+      createContents();
+      shlButtonEventDemo.open();
+      shlButtonEventDemo.layout();
+      while (!shlButtonEventDemo.isDisposed()) {
+          if (!display.readAndDispatch()) {
+              display.sleep();
+          }
+      }
+  }
+
+  protected void createContents() {
+      shlButtonEventDemo = new Shell();
+      shlButtonEventDemo.setSize(296, 205);
+      shlButtonEventDemo.setText("Button Event Demo");
+      shlButtonEventDemo.setLayout(new RowLayout(SWT.HORIZONTAL));
+
+      Button btnClickToMe = new Button(shlButtonEventDemo, SWT.NONE);
+      btnClickToMe.addSelectionListener(new SelectionAdapter() {
+          @Override
+          public void widgetSelected(SelectionEvent e) {
+              // Handle Button selected here!
+              System.out.println("Button selected!");
+          }
+      });
+      btnClickToMe.setText("Click to me");
+
+  }
+
+}
 
 }
 ########################################################################################################################
