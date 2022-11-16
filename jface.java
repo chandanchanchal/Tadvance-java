@@ -97,3 +97,30 @@ public class ResourceDemo {
    }
 }
 ####################################################################################
+public static List<AppMenu> getAppMenus() {
+      if (appMenuList == null) {
+          appMenuList = new ArrayList<AppMenu>();
+
+          AppMenu appMenu31 = new AppMenu("ErrorLog", "Error Log", null);
+          AppMenu appMenu32 = new AppMenu("ProjectExplorer",
+                  "Project Explorer", null);
+
+          List<AppMenu> list3 = new ArrayList<AppMenu>();
+          list3.add(appMenu31);
+          list3.add(appMenu32);
+
+          AppMenu appMenu21 = new AppMenu("ShowView", "Show View", list3);
+          AppMenu appMenu22 = new AppMenu("ClosePerspective",
+                  "Close perspective...", null);
+          List<AppMenu> list2 = new ArrayList<AppMenu>();
+          list2.add(appMenu21);
+          list2.add(appMenu22);
+
+          AppMenu appMenu1 = new AppMenu("Window", "Window", list2);
+
+          appMenuList.add(appMenu1);
+      }
+      return appMenuList;
+  }
+  
+######################################################################################
