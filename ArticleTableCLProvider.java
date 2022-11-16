@@ -5,8 +5,8 @@ import org.eclipse.jface.resource.JFaceResources;
 import org.eclipse.jface.resource.LocalResourceManager;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Display;
-import org.o7planning.tutorial.jface.model.Article;
-import org.o7planning.tutorial.jface.provider.AbstractTableContentLabelProvider;
+import org.jface.model.Article;
+import org.jface.provider.AbstractTableContentLabelProvider;
 
 public class ArticleTableCLProvider extends AbstractTableContentLabelProvider {
 
@@ -19,7 +19,7 @@ public class ArticleTableCLProvider extends AbstractTableContentLabelProvider {
 
         ImageDescriptor imageDescriptor = ImageDescriptor.createFromFile(
                 ArticleTableCLProvider.class,
-                "/org/o7planning/tutorial/jface/image/check.png");
+                "check.png");
         image = jfaceRsManager.createImage(imageDescriptor);
     }
 
