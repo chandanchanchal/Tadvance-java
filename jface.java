@@ -88,7 +88,7 @@ public class ResourceDemo {
        Font font = jfaceRsManager.createFont(FontDescriptor.createFrom(
                "Arial", 10, SWT.BOLD));
       
-       
+       ImageDescriptor imageDescriptor = ImageDescriptor.createFromFile(ResourceDemo.class,"check.png");
        Image image = jfaceRsManager.createImage(imageDescriptor);
 
        button2.setFont(font);
