@@ -124,3 +124,22 @@ public static List<AppMenu> getAppMenus() {
   }
   
 ######################################################################################
+
+// Get TableViewer data.
+List<Article> input = (List<Article>)tableViewer.getInput();
+
+// Add row
+Article newArticle = .... ;
+input.add(newArticle);
+
+// Refresh row
+tableViewer.refresh(newArticle);
+// Or
+tableViewer.refresh();
+
+// remove row
+input.remove(<article>);
+
+tableViewer.refresh();
+
+##########################################################################
