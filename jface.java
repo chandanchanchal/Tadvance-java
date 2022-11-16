@@ -75,7 +75,7 @@ public class ResourceDemo {
        
        btnButtonU.setText("Button using SWT Resource Manager");
 
-       //
+     
 
        Button button2 = new Button(shlResourceDemo, SWT.NONE);
        button2.setText("Button using JFace Resource Manager");
@@ -88,9 +88,7 @@ public class ResourceDemo {
        Font font = jfaceRsManager.createFont(FontDescriptor.createFrom(
                "Arial", 10, SWT.BOLD));
       
-       ImageDescriptor imageDescriptor = ImageDescriptor.createFromFile(
-               ResourceDemo.class,
-               "/org/o7planning/tutorial/jface/image/check.png");
+       
        Image image = jfaceRsManager.createImage(imageDescriptor);
 
        button2.setFont(font);
